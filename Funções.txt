@@ -1,0 +1,55 @@
+Rafhael
+	BackEnd (posteriormente dividido) 
+
+Arthur	
+	BackEnd (posteriormente dividido)
+
+Yanaguya (pinto pequeno)
+	Documento
+	BackEnd (posteriormente dividido)
+
+
+Joyce
+	Layout  (URGENTE)
+	Imagens relativas ao layout(por exemplo logo, telas,botões etc)
+
+Luiz
+	
+	Ids dos botões(URGENTE)
+	Comunicação entre intents(URGENTE)
+	alterar idioma (inglês/pt (aula 06/06))
+	Conectar com fb(no final)
+
+
+
+
+
+
+Rafhael/Shun/Pinto Pequeno
+
+Aprender a usar GPS
+Cadastro
+	-User
+	-Motorista
+Login
+Banco
+	-User
+		Nome,ID,Telefone
+		
+	-Motorista
+		Avaliação(comentario),Nota,Nome,Telefone
+		-Veículo
+			cor, modelo, ano, ID
+	-Corridas
+		IdMotorista,Iduser, Data, Valor, Destino, Partida, Horainicial,HoraFim
+		-Pagamento
+			Modo, Dados, Pago
+
+Tela User:
+	Pedir Corrida, Por crédito, Crédito, Sair
+
+Tela Motorista:
+	Trabalhar,Parar,Corridas Disponíveis, Saldo, Sair
+
+
+Crédito (FINAL)
