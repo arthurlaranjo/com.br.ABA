@@ -4,20 +4,20 @@ Rafhael
 Arthur	
 	BackEnd (posteriormente dividido)
 
-Yanaguya (pinto pequeno)
-	Documento
+Yanaguya
+	
 	BackEnd (posteriormente dividido)
 
 
 Joyce
 	Layout  (URGENTE)
-	Imagens relativas ao layout(por exemplo logo, telas,botões etc)
+	Imagens relativas ao layout(por exemplo logo, telas,botÃµes etc)
 
 Luiz
 	
-	Ids dos botões(URGENTE)
-	Comunicação entre intents(URGENTE)
-	alterar idioma (inglês/pt (aula 06/06))
+	Ids dos botÃµes(URGENTE)
+	ComunicaÃ§Ã£o entre intents(URGENTE)
+	alterar idioma (inglÃªs/pt (aula 06/06))
 	Conectar com fb(no final)
 
 
@@ -25,7 +25,7 @@ Luiz
 
 
 
-Rafhael/Shun/Pinto Pequeno
+Rafhael/Arthur/Leonardo Y
 
 Aprender a usar GPS
 Cadastro
@@ -37,19 +37,28 @@ Banco
 		Nome,ID,Telefone
 		
 	-Motorista
-		Avaliação(comentario),Nota,Nome,Telefone
-		-Veículo
+		AvaliaÃ§Ã£o(comentario),Nota,Nome,Telefone
+		-VeÃ­culo
 			cor, modelo, ano, ID
 	-Corridas
 		IdMotorista,Iduser, Data, Valor, Destino, Partida, Horainicial,HoraFim
 		-Pagamento
 			Modo, Dados, Pago
 
-Tela User:
-	Pedir Corrida, Por crédito, Crédito, Sair
+Tela do usuario:
+	Login
+	Solicitar pedido(mostrar mapa) 
+	Valor da Corrida
+	Escolher metodo de Pagamento(mostrar dados do motorista)
+	Cancelar Pedido
+	Sair
 
 Tela Motorista:
-	Trabalhar,Parar,Corridas Disponíveis, Saldo, Sair
+	Login
+	ServiÃ§os DisponÃ­veis(mostrar dados do cliente)
+	Finalizar expediente
+	Mostrar Saldo
+	Sair
 
 
-Crédito (FINAL)
+CrÃ©dito (FINAL)
