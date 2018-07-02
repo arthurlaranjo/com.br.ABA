@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".BuscaActivity"
-            android:label="@string/title_activity_busca"
+            android:label="ABA"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
