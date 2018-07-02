@@ -19,6 +19,10 @@
         <activity
             android:name=".BuscaActivity"
             android:label="ABA"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ContaActivity"
+            android:label="@string/title_activity_conta"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
