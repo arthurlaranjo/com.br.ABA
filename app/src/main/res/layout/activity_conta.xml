@@ -11,9 +11,9 @@
 
 
         <LinearLayout
-            android:background="@drawable/side_nav_bar"
+            android:background="@color/amarelo"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:orientation="vertical">
 
             <ImageView
@@ -119,13 +119,14 @@
     </LinearLayout>
 
     <Button
+        android:textColor="#9f9c9c"
+        android:background="@drawable/stylebutton"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/side_nav_bar"
-        android:text="Alterar"
-        android:textColor="#fff" />
+        android:text="Alterar"/>
+
 
 
 </LinearLayout>

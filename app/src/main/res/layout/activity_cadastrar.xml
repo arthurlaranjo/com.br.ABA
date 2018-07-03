@@ -45,13 +45,16 @@
                 android:inputType="textPassword"
                 android:layout_height="wrap_content"
                 android:hint="Confirmar senha"/>
+
             <Button
-                android:layout_width="match_parent"
-                android:id="@+id/btngravar"
-                android:text="Salvar"
-                android:gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/stylebutton"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:id="@+id/btngravar"
+                android:text="Salvar"/>
 
 
 

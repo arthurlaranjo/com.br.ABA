@@ -70,7 +70,7 @@ public class BuscaActivity extends AppCompatActivity
             Intent it = new Intent(BuscaActivity.this,Viagens.class);
             startActivity(it);
         } else if (id == R.id.nav_gallery) {
-            Intent it = new Intent(BuscaActivity.this,Ajuda.class);
+            Intent it = new Intent(BuscaActivity.this,ContaActivity.class);
             startActivity(it);
         } else if (id == R.id.nav_slideshow) {
             Intent it = new Intent(BuscaActivity.this,Pagamento.class);
