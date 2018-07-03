@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,13 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BuscaActivity"
+            android:name=".Activity.BuscaActivity"
             android:label="ABA"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ContaActivity"
+            android:name=".Activity.ContaActivity"
             android:label="@string/title_activity_conta"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.Cadastrar" />
+        <activity android:name=".Activity.Viagens" />
+        <activity android:name=".Activity.Ajuda" />
+        <activity android:name=".Activity.Pagamento" />
+        <activity android:name=".Activity.Configuracoes"></activity>
     </application>
 
 </manifest>

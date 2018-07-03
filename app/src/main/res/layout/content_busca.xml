@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".BuscaActivity"
+    tools:context=".Activity.BuscaActivity"
     tools:showIn="@layout/app_bar_busca">
 
     <EditText
@@ -19,7 +19,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="true"
-        android:text="Para onde?"
+        android:hint="Para onde?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
