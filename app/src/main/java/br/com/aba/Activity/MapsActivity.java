@@ -34,7 +34,9 @@ import java.util.Map;
 
 import br.com.aba.R;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
+import static java.security.AccessController.getContext;
+
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleMap.OnMapClickListener {
 
     private GoogleMap mMap;
 
@@ -66,11 +68,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        mMap.setOnMapClickListener(this);
+
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(20).target(sydney).build();
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+//        LatLng sydney = new LatLng(-34, 151);
+//        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(20).target(sydney).build();
+//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+//        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
     @Override
@@ -260,6 +266,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onProviderDisabled(String s) {
+
+    }
+
+    @Override
+    public void onMapClick(LatLng latLng) {
+
+        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(10).target(latLng).build();
+        mMap.clear();
+        startGettingLocations();
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Sydney"));
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
     }
 }
