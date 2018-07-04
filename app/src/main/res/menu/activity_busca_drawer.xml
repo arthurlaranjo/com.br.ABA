@@ -14,12 +14,16 @@
             android:title="Perfil" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_check_black_24dp"
             android:title="Pagamento" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Configurações" />
+        <item
+            android:id="@+id/nav_a"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Ajuda" />
     </group>
 
 

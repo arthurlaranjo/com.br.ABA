@@ -67,7 +67,7 @@ public class BuscaActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Intent it = new Intent(BuscaActivity.this,Viagens.class);
+            Intent it = new Intent(BuscaActivity.this, MapsActivity.class);
             startActivity(it);
         } else if (id == R.id.nav_gallery) {
             Intent it = new Intent(BuscaActivity.this,ContaActivity.class);
@@ -77,6 +77,10 @@ public class BuscaActivity extends AppCompatActivity
             startActivity(it);
         } else if (id == R.id.nav_manage) {
             Intent it = new Intent(BuscaActivity.this,Configuracoes.class);
+            startActivity(it);
+        }
+        else if (id == R.id.nav_a) {
+            Intent it = new Intent(BuscaActivity.this,Ajuda.class);
             startActivity(it);
         }
 
