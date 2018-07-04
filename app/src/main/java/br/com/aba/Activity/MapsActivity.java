@@ -53,7 +53,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private Marker currentLocationMarker;
     private LatLng currentLocationLatLong;
-
+    private int verifica=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,12 +65,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         startGettingLocations();
 
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 //        setUpMapIfNeeded();
+
     }
 
 
@@ -90,6 +92,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            mMap.clear();
+            startGettingLocations();
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
 
@@ -150,6 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-19.7502, -47.9325 );
@@ -158,6 +163,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 //        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(15).target(sydney).build();
 //        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        if(currentLocationMarker == null){
+            currentLocationLatLong= new LatLng(-19.7502, -47.9325 );
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.position(currentLocationLatLong);
+            markerOptions.title("Estou aki");
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+            currentLocationMarker=mMap.addMarker(markerOptions);
+        }
+        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(15).target(currentLocationLatLong).build();
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+
     }
 
 
@@ -172,10 +189,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.title("Estou aki");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         currentLocationMarker=mMap.addMarker(markerOptions);
-        CameraPosition cameraPosition=new CameraPosition.Builder().zoom(15).target(currentLocationLatLong).build();
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        if(verifica == 0){
+            CameraPosition cameraPosition=new CameraPosition.Builder().zoom(15).target(currentLocationLatLong).build();
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            verifica=1;
+        }
 
-        Toast.makeText(this, "Localização Atualizada",Toast.LENGTH_SHORT).show();
+
+
+        // Toast.makeText(this, "Localização Atualizada",Toast.LENGTH_SHORT).show();
     }
 
 
