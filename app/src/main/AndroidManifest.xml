@@ -36,16 +36,24 @@
         <activity
             android:name=".Activity.BuscaActivity"
             android:label="ABA"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation = "portrait"/>
         <activity
             android:name=".Activity.ContaActivity"
             android:label="@string/title_activity_conta"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.Cadastrar" />
-        <activity android:name=".Activity.Viagens" />
-        <activity android:name=".Activity.Ajuda" />
-        <activity android:name=".Activity.Pagamento" />
-        <activity android:name=".Activity.Configuracoes" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".Activity.Cadastrar"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".Activity.Viagens"
+            android:screenOrientation = "portrait"/>
+
+        <activity android:name=".Activity.Ajuda"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".Activity.Pagamento"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".Activity.Configuracoes"
+            android:screenOrientation = "portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
